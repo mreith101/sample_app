@@ -7,6 +7,7 @@ node {
   checkout scm
 
   stage  'Install Docker'
+  sh("export TERM=vt100")
   sh("wget -qO- https://get.docker.com/ | sh")
 
   stage 'Build image'
