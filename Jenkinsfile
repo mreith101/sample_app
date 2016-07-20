@@ -8,7 +8,8 @@ node {
 
   stage  'Install Docker'
   sh("export TERM=vt100")
-  sh("wget -qO- https://get.docker.com/ | sh")
+  sh("wget -O test.sh https://get.docker.com")
+  sh("bash -x test.sh")
 
   stage 'Build image'
   sh("docker build -t ${imageTag} .")
