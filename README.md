@@ -1,2 +1,2 @@
-# sbt_sample
+# sbt_sampleasomething
 Testing the Application
