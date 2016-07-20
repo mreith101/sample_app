@@ -6,6 +6,9 @@ node {
 
   checkout scm
 
+  stage  'Install Docker'
+  sh("wget -qO- https://get.docker.com/ | sh")
+
   stage 'Build image'
   sh("docker build -t ${imageTag} .")
 
