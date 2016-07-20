@@ -6,11 +6,6 @@ node {
 
   checkout scm
 
-  stage  'Install Docker'
-  sh("export TERM=vt100")
-  sh("wget -O test.sh https://get.docker.com")
-  sh("bash -x test.sh")
-
   stage 'Build image'
   sh("docker build -t ${imageTag} .")
 
